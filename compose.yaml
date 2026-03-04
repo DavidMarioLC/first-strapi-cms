@@ -4,9 +4,9 @@ services:
     image: postgres:17
     restart: always
     environment:
+      POSTGRES_DB: first_strapi_db
       POSTGRES_USER: first_strapi
       POSTGRES_PASSWORD: 12345678
-      POSTGRES_DB: first_strapi_db
     ports:
       - "5432:5432" # Mapea el puerto del contenedor al de tu Mac
     volumes:
