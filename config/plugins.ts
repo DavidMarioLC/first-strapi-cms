@@ -12,6 +12,7 @@ const config = ({
       amountLimit: 100,
       apolloServer: {
         tracing: false,
+        introspection: true, // Esto habilita la introspección en producción
       },
     },
   },
