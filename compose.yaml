@@ -1,0 +1,16 @@
+services:
+  strapiDB:
+    container_name: postgres_strapi
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_USER: first_strapi
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: first_strapi_db
+    ports:
+      - "5432:5432" # Mapea el puerto del contenedor al de tu Mac
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
